@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8968360-808D-4827-8CA7-67DF0DC31F97}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CarInterface</RootNamespace>
+    <AssemblyName>CarInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigControl.Designer.cs">
+      <DependentUpon>ConfigControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigReader.cs" />
+    <Compile Include="DB.cs" />
+    <Compile Include="IAuto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IAuto.Designer.cs">
+      <DependentUpon>IAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDrivers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IDrivers.Designer.cs">
+      <DependentUpon>IDrivers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IViezd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IViezd.Designer.cs">
+      <DependentUpon>IViezd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConfigControl.resx">
+      <DependentUpon>ConfigControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IAuto.resx">
+      <DependentUpon>IAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IDrivers.resx">
+      <DependentUpon>IDrivers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IViezd.resx">
+      <DependentUpon>IViezd.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\DataSources\CarClassDB.Auto.datasource" />
+    <None Include="Properties\DataSources\CarClassDB.Drivers.datasource" />
+    <None Include="Properties\DataSources\CarClassDB.Viezd.datasource" />
+    <None Include="uml-diag\Clases.cd" />
+    <None Include="uml-diag\ClassesControls.cd" />
+    <None Include="uml-diag\ConfigControl.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YanivLibrary\CarClassDb.csproj">
+      <Project>{d098164f-fac4-4251-9413-441ae1171dbb}</Project>
+      <Name>CarClassDb</Name>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
