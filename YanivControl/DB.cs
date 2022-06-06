@@ -1,22 +1,29 @@
 ﻿using CarClassDB;
+using CarClassDB.Entity;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
 
 namespace CarInterface
 {
-    public class DB
+    public class DB 
     {
-        private ConfigReader conf = ConfigReader.getInstance();
-        private static DB database = null;
+        
         private List<Viezd> viezds_table = new List<Viezd>();
         private List<Drivers> drivers_table = new List<Drivers>();
         private List<Auto> autos_table = new List<Auto>();
+        private ConfigReader conf = ConfigReader.getInstance();
+        private static DB database = null;
 
         private DB() {
             
         }
 
+        
         public static DB getInstance()
         {
             if (database == null) database = new DB();
@@ -153,6 +160,23 @@ namespace CarInterface
         public List<Viezd> ViezdSource()
         {
             return viezds_table;
+        }
+
+        public List<Entity> toEntList()
+        {
+            List<Entity> all_entities = new List<Entity>();
+            foreach (Auto a in autos_table)
+                all_entities.Add(a);
+            foreach (Drivers a in drivers_table)
+                all_entities.Add(a);
+            foreach (Viezd a in viezds_table)
+                all_entities.Add(a);
+            return all_entities;
+        }
+        public void SeparateList(List<Entity> all_entities)
+        {
+            foreach (Entity e in all_entities)
+                add(e);
         }
     }
 }
