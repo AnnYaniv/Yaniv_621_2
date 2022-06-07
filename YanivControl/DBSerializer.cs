@@ -1,19 +1,49 @@
 ﻿using CarClassDB.Entity;
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using Newtonsoft.Json;
 
 namespace CarInterface
 {
+    // ToDo: #4 Util class to do serialization and deserialization 
     public static class DBSerializer
     {
         
+        public static List<Entity> read(string filename)
+        {
+            List<Entity> result = new List<Entity>();
+            switch(filename.Substring(filename.Length - 4))
+            {
+                case ".xml":
+                    result = readXML(filename);
+                    break;
+                case "json":
+                    result = readJSON(filename);
+                    break;
+                case ".dat":
+                    result = readDAT(filename);
+                    break;
+            }
+            return result;
+        }
+        public static void write(string filename, List<Entity> writeList)
+        {
+            switch (filename.Substring(filename.Length - 4))
+            {
+                case ".xml":
+                    writeXML(filename, writeList);
+                    break;
+                case "json":
+                    writeJSON(filename,writeList);
+                    break;
+                case ".dat":
+                    writeDAT(filename,writeList);
+                    break;
+            }
+        }
+
         public static void writeJSON(string filename, List<Entity> writeList)
         {
             using (TextWriter fs = File.CreateText(filename))
@@ -27,8 +57,9 @@ namespace CarInterface
         public static List<Entity> readJSON(string filename)
         {
             List<Entity> result = new List<Entity>();
-
-            using (JsonTextReader file = new JsonTextReader(File.OpenText(filename)))
+            using (Stream Stream = new FileStream(filename, FileMode.Open))
+            using (StreamReader SR = new StreamReader(Stream))
+            using (JsonTextReader file = new JsonTextReader(SR))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.TypeNameHandling = TypeNameHandling.All;

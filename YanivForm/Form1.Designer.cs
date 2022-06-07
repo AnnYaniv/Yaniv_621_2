@@ -41,6 +41,10 @@ namespace YanivForm
             this.Viezds = new System.Windows.Forms.TabPage();
             this.iViezd1 = new CarInterface.IViezd();
             this.Sort = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.configControl1 = new CarInterface.ConfigControl();
             this.DataBase.SuspendLayout();
             this.Auto.SuspendLayout();
@@ -51,8 +55,8 @@ namespace YanivForm
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(805, 12);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(841, 12);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 28);
             this.button1.TabIndex = 1;
@@ -63,8 +67,8 @@ namespace YanivForm
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(805, 44);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(841, 44);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(81, 29);
             this.button2.TabIndex = 3;
@@ -75,8 +79,8 @@ namespace YanivForm
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(805, 77);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(756, 12);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(81, 28);
             this.button3.TabIndex = 5;
@@ -87,8 +91,9 @@ namespace YanivForm
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(805, 109);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(843, 100);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(79, 30);
             this.button4.TabIndex = 6;
@@ -107,7 +112,7 @@ namespace YanivForm
             this.DataBase.Location = new System.Drawing.Point(12, 12);
             this.DataBase.Name = "DataBase";
             this.DataBase.SelectedIndex = 0;
-            this.DataBase.Size = new System.Drawing.Size(669, 468);
+            this.DataBase.Size = new System.Drawing.Size(705, 502);
             this.DataBase.TabIndex = 7;
             // 
             // Auto
@@ -115,8 +120,8 @@ namespace YanivForm
             this.Auto.Controls.Add(this.iAuto1);
             this.Auto.Location = new System.Drawing.Point(4, 22);
             this.Auto.Name = "Auto";
-            this.Auto.Padding = new System.Windows.Forms.Padding(3);
-            this.Auto.Size = new System.Drawing.Size(661, 442);
+            this.Auto.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Auto.Size = new System.Drawing.Size(697, 476);
             this.Auto.TabIndex = 0;
             this.Auto.Text = "Car";
             this.Auto.UseVisualStyleBackColor = true;
@@ -126,10 +131,10 @@ namespace YanivForm
             this.iAuto1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.iAuto1.Location = new System.Drawing.Point(0, 0);
-            this.iAuto1.Margin = new System.Windows.Forms.Padding(2);
+            this.iAuto1.Location = new System.Drawing.Point(0, 2);
+            this.iAuto1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iAuto1.Name = "iAuto1";
-            this.iAuto1.Size = new System.Drawing.Size(661, 442);
+            this.iAuto1.Size = new System.Drawing.Size(695, 472);
             this.iAuto1.TabIndex = 0;
             // 
             // Drivers
@@ -137,8 +142,8 @@ namespace YanivForm
             this.Drivers.Controls.Add(this.iDrivers1);
             this.Drivers.Location = new System.Drawing.Point(4, 22);
             this.Drivers.Name = "Drivers";
-            this.Drivers.Padding = new System.Windows.Forms.Padding(3);
-            this.Drivers.Size = new System.Drawing.Size(607, 393);
+            this.Drivers.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Drivers.Size = new System.Drawing.Size(697, 476);
             this.Drivers.TabIndex = 1;
             this.Drivers.Text = "Drivers";
             this.Drivers.UseVisualStyleBackColor = true;
@@ -148,10 +153,10 @@ namespace YanivForm
             this.iDrivers1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.iDrivers1.Location = new System.Drawing.Point(0, 0);
-            this.iDrivers1.Margin = new System.Windows.Forms.Padding(2);
+            this.iDrivers1.Location = new System.Drawing.Point(-2, 0);
+            this.iDrivers1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iDrivers1.Name = "iDrivers1";
-            this.iDrivers1.Size = new System.Drawing.Size(607, 391);
+            this.iDrivers1.Size = new System.Drawing.Size(697, 474);
             this.iDrivers1.TabIndex = 0;
             // 
             // Viezds
@@ -159,7 +164,7 @@ namespace YanivForm
             this.Viezds.Controls.Add(this.iViezd1);
             this.Viezds.Location = new System.Drawing.Point(4, 22);
             this.Viezds.Name = "Viezds";
-            this.Viezds.Size = new System.Drawing.Size(607, 393);
+            this.Viezds.Size = new System.Drawing.Size(697, 476);
             this.Viezds.TabIndex = 2;
             this.Viezds.Text = "Travels";
             this.Viezds.UseVisualStyleBackColor = true;
@@ -170,29 +175,61 @@ namespace YanivForm
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.iViezd1.Location = new System.Drawing.Point(0, 2);
-            this.iViezd1.Margin = new System.Windows.Forms.Padding(2);
+            this.iViezd1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iViezd1.Name = "iViezd1";
-            this.iViezd1.Size = new System.Drawing.Size(675, 391);
+            this.iViezd1.Size = new System.Drawing.Size(695, 472);
             this.iViezd1.TabIndex = 0;
             // 
             // Sort
             // 
             this.Sort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Sort.Location = new System.Drawing.Point(805, 143);
-            this.Sort.Margin = new System.Windows.Forms.Padding(2);
+            this.Sort.Location = new System.Drawing.Point(756, 44);
+            this.Sort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Sort.Name = "Sort";
-            this.Sort.Size = new System.Drawing.Size(79, 30);
+            this.Sort.Size = new System.Drawing.Size(81, 29);
             this.Sort.TabIndex = 8;
             this.Sort.Text = "Sort";
             this.Sort.UseVisualStyleBackColor = true;
             this.Sort.Click += new System.EventHandler(this.Sort_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(756, 150);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(81, 31);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Open";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.BackColor = System.Drawing.Color.LightGreen;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(843, 150);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(79, 31);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Save";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // configControl1
             // 
             this.configControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.configControl1.BackColor = System.Drawing.SystemColors.Control;
-            this.configControl1.Location = new System.Drawing.Point(708, 246);
-            this.configControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.configControl1.Location = new System.Drawing.Point(744, 280);
+            this.configControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.configControl1.Name = "configControl1";
             this.configControl1.Size = new System.Drawing.Size(178, 230);
             this.configControl1.TabIndex = 9;
@@ -201,7 +238,9 @@ namespace YanivForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 492);
+            this.ClientSize = new System.Drawing.Size(933, 526);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.configControl1);
             this.Controls.Add(this.Sort);
             this.Controls.Add(this.DataBase);
@@ -209,7 +248,7 @@ namespace YanivForm
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Yaniv_621_2";
             this.DataBase.ResumeLayout(false);
@@ -234,6 +273,10 @@ namespace YanivForm
         private CarInterface.IViezd iViezd1;
         private System.Windows.Forms.Button Sort;
         private CarInterface.ConfigControl configControl1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 

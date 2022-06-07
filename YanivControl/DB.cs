@@ -161,7 +161,7 @@ namespace CarInterface
         {
             return viezds_table;
         }
-
+        // ToDo: #4 code below helps DBSerializer.cs to do serialization and deserializations things
         public List<Entity> toEntList()
         {
             List<Entity> all_entities = new List<Entity>();
@@ -175,6 +175,9 @@ namespace CarInterface
         }
         public void SeparateList(List<Entity> all_entities)
         {
+            autos_table.Clear();
+            drivers_table.Clear();
+            viezds_table.Clear();
             foreach (Entity e in all_entities)
                 add(e);
         }

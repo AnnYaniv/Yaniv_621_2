@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarInterface", "YanivContro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanivForm", "YanivForm\YanivForm.csproj", "{311C168F-3235-42DB-AFAA-75870590483F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ser_tester", "Ser_tester\Ser_tester.csproj", "{865BC56F-1BE4-4949-9874-00E1141327D1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{311C168F-3235-42DB-AFAA-75870590483F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{311C168F-3235-42DB-AFAA-75870590483F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{311C168F-3235-42DB-AFAA-75870590483F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{865BC56F-1BE4-4949-9874-00E1141327D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{865BC56F-1BE4-4949-9874-00E1141327D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{865BC56F-1BE4-4949-9874-00E1141327D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{865BC56F-1BE4-4949-9874-00E1141327D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
