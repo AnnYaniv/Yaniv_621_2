@@ -150,12 +150,13 @@ namespace YanivForm
             WordSave.FileName = "just_word";
             WordSave.Title = "Save Word";
             WordSave.InitialDirectory = Environment.CurrentDirectory;
-            /*if (WordSave.ShowDialog() == DialogResult.OK)
+            if (WordSave.ShowDialog() == DialogResult.OK)
             {
                 string filePath = WordSave.FileName;
-            }*/
-            DataTable[] dt = { GetDataTableFromDGV(iAuto1.datagridview, "Auto"), GetDataTableFromDGV(iViezd1.datagridview, "Viezd"), GetDataTableFromDGV(iDrivers1.datagridview, "Driver") };
-            ToOffice.toWord(dt, "D:\\qwerty.docx");
+                DataTable[] dt = { GetDataTableFromDGV(iAuto1.datagridview, "Auto"), GetDataTableFromDGV(iViezd1.datagridview, "Viezd"), GetDataTableFromDGV(iDrivers1.datagridview, "Driver") };
+                ToOffice.toWord(dt, filePath);
+            }
+
         }
         private void button7_Click(object sender, EventArgs e)
         {

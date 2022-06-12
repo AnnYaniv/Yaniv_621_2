@@ -51,14 +51,22 @@ namespace CarInterface
         {
             try
             {
+                object myMissingValue = System.Reflection.Missing.Value;
                 Word.Application word = new Word.Application();
+                word.Visible = true;
                 Word.Document doc = word.Documents.Add(Visible: true);
+                doc = word.ActiveDocument;
                 Word.Range range = doc.Range();
-
+                int style = 4;
                 foreach(DataTable dt in ds)
                 {
                     Word.Table table = doc.Tables.Add(range, dt.Rows.Count + 1, dt.Columns.Count);
+                    doc.Words.Last.InsertBreak(Word.WdBreakType.wdTextWrappingBreak);
+                    range = doc.Range(doc.Content.End - 1, ref myMissingValue);
+                    
                     table.Borders.Enable = 1;
+                    table.set_Style("List Table 4 - Accent " + style);
+                    style++;
                     int i = 0;
                     foreach (Word.Row row in table.Rows)
                     {
@@ -73,13 +81,13 @@ namespace CarInterface
                         }
                         if (row.Index > 1)
                             i += 1;
+
+                        
                     }
-
                 }
-
+                doc.SaveAs(filename);
+                doc.Close();
                 word.Quit();
-                doc.SaveAs("D:\\aaaa.docx");
-                
                 return true;
             }
             catch(Exception ex)
