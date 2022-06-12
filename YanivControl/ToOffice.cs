@@ -53,8 +53,8 @@ namespace CarInterface
             {
                 object myMissingValue = System.Reflection.Missing.Value;
                 Word.Application word = new Word.Application();
-                word.Visible = true;
-                Word.Document doc = word.Documents.Add(Visible: true);
+                word.Visible = false;
+                Word.Document doc = word.Documents.Add();
                 doc = word.ActiveDocument;
                 Word.Range range = doc.Range();
                 int style = 4;
