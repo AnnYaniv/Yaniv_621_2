@@ -10,7 +10,6 @@ namespace CarInterface
     // ToDo: #4 Util class to do serialization and deserialization 
     public static class DBSerializer
     {
-        
         public static List<Entity> read(string filename)
         {
             List<Entity> result = new List<Entity>();

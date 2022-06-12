@@ -54,6 +54,7 @@
     <None Include="Properties\DataSources\Auto.datasource" />
     <None Include="Properties\DataSources\Drivers.datasource" />
     <None Include="Properties\DataSources\Viezd.datasource" />
+    <None Include="uml-diagram\Car-db-classes.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

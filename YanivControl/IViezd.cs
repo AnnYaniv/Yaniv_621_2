@@ -15,7 +15,13 @@ namespace CarInterface
     {
         private DB dataBase = DB.getInstance();
         int last_selected = -1;
-
+        public DataGridView datagridview
+        {
+            get
+            {
+                return dataGridView1;
+            }
+        }
         public IViezd()
         {
             InitializeComponent();

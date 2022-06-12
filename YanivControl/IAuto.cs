@@ -25,6 +25,14 @@ namespace CarInterface
             }
         }
 
+        public DataGridView datagridview
+        {
+            get
+            {
+                return dataGridView1;
+            }
+        }
+
         public IAuto()
         {
             InitializeComponent();
