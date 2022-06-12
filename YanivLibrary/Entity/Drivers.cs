@@ -14,7 +14,7 @@ namespace CarClassDB
     public class Drivers : Entity.Entity, ISerializable
     {
         [DisplayName("Id Driver")] public int id { get; set; }
-        [DisplayName("Passport")] public String passportSeries { get; set; }
+        [DisplayName("Passport Series")] public String passportSeries { get; set; }
         [DisplayName("Passport")] public int passport { get; set; }
         [DisplayName("Surname")] public String surname { get; set; }
         [DisplayName("Name")] public String name { get; set; }

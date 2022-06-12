@@ -14,5 +14,12 @@
       <FileName>DB.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="CarInterface.DBSerializer">
+    <Position X="5" Y="3.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAACAACAICAQAAAAAAAQAABAAAAAA=</HashCode>
+      <FileName>DBSerializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

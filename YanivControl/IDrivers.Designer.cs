@@ -63,12 +63,12 @@ namespace CarInterface
             this.receiptDataGridViewTextBoxColumn,
             this.categoryDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.driversBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 2);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(638, 394);
+            this.dataGridView1.Size = new System.Drawing.Size(851, 485);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -80,60 +80,68 @@ namespace CarInterface
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
             this.idDataGridViewTextBoxColumn.HeaderText = "Id Driver";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
             // passportSeriesDataGridViewTextBoxColumn
             // 
             this.passportSeriesDataGridViewTextBoxColumn.DataPropertyName = "passportSeries";
-            this.passportSeriesDataGridViewTextBoxColumn.HeaderText = "Passport";
+            this.passportSeriesDataGridViewTextBoxColumn.HeaderText = "Passport Series";
+            this.passportSeriesDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.passportSeriesDataGridViewTextBoxColumn.Name = "passportSeriesDataGridViewTextBoxColumn";
             // 
             // passportDataGridViewTextBoxColumn
             // 
             this.passportDataGridViewTextBoxColumn.DataPropertyName = "passport";
             this.passportDataGridViewTextBoxColumn.HeaderText = "Passport";
+            this.passportDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.passportDataGridViewTextBoxColumn.Name = "passportDataGridViewTextBoxColumn";
             // 
             // surnameDataGridViewTextBoxColumn
             // 
             this.surnameDataGridViewTextBoxColumn.DataPropertyName = "surname";
             this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
+            this.surnameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
             // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             // 
             // patronymicDataGridViewTextBoxColumn
             // 
             this.patronymicDataGridViewTextBoxColumn.DataPropertyName = "patronymic";
             this.patronymicDataGridViewTextBoxColumn.HeaderText = "Patronymic";
+            this.patronymicDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.patronymicDataGridViewTextBoxColumn.Name = "patronymicDataGridViewTextBoxColumn";
             // 
             // receiptDataGridViewTextBoxColumn
             // 
             this.receiptDataGridViewTextBoxColumn.DataPropertyName = "receipt";
             this.receiptDataGridViewTextBoxColumn.HeaderText = "Date of receipt";
+            this.receiptDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.receiptDataGridViewTextBoxColumn.Name = "receiptDataGridViewTextBoxColumn";
             // 
             // categoryDataGridViewTextBoxColumn
             // 
             this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
             this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
+            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
             this.categoryDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.categoryDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // IDrivers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "IDrivers";
-            this.Size = new System.Drawing.Size(642, 396);
+            this.Size = new System.Drawing.Size(856, 487);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.driversBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -144,7 +152,6 @@ namespace CarInterface
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn driverIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource driversBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passportSeriesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passportDataGridViewTextBoxColumn;
@@ -153,5 +160,6 @@ namespace CarInterface
         private System.Windows.Forms.DataGridViewTextBoxColumn patronymicDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn receiptDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn categoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource driversBindingSource;
     }
 }
